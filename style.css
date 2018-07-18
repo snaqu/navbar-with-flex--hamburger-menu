@@ -1,0 +1,139 @@
+* {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	background-color: white;
+}
+
+.navbar--list__link {
+	padding-right: 20px;
+	color: white;
+	margin-right: 56px;
+	border-bottom: 2px solid transparent;
+	padding-right: 0px;
+	padding-bottom: 4px;
+	cursor: pointer;
+	text-decoration: none;
+	position: relative;
+}
+
+.navbar--list__link:after {
+	position: absolute;
+	content: '';
+	width: 0px;
+	left: 0;
+	bottom: 0;
+	border-bottom: solid 3px #8aacb8;
+	transition: all 300ms ease-in-out;
+	opacity: 1;
+}
+
+.navbar--list__link:hover:after {
+	width: 100%;
+}
+
+#navbar--toggle {
+	cursor: pointer;
+	color: white;
+	font-size: 24px;
+	line-height: 57px;
+	margin-right: 35px;
+
+}
+
+#navbar--toggle:hover {
+	color: white;
+}
+
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 18px;
+	background-color: lightblue;
+	border-bottom: 1px solid #ebebeb;
+}
+
+
+
+#navbar--list {
+	list-style-type: none;
+	display: none;
+	flex-direction: column;
+	text-transform: uppercase;
+	font-family: 'Raleway', sans-serif;
+}
+
+.navbar--logo {
+	display: inline-block;
+	line-height: 56px;
+	font-family: 'Dancing Script', cursive;
+	font-size: 22px;
+	margin-left: 55px;
+	color: white;
+	text-decoration: none;
+
+}
+
+#navbar--list li {
+	height: 45px;
+	line-height: 45px;
+}
+
+@media screen and (min-width: 920px) {
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 0;
+		height: 70px;
+		align-items: center;
+	}
+	#navbar--list {
+		display: flex !important;
+		margin-right: 30px;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+	#navbar--list li {
+		margin: 0;
+	}
+	.nav-links {
+		margin-left: 40px;
+	}
+	#logo {
+		margin-top: 0;
+	}
+	#navbar--toggle {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 919px) {
+	#navbar--list {
+		width: 100%;
+		padding: 0px 0px 0px 50px;
+	}
+	.navbar {
+		flex-direction: column;
+	}
+	.navbar--row {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+
+@media only screen and (max-width: 290px) {
+	.navbar--logo {
+		margin-left: 35px;
+	}
+	#navbar--list {
+		width: 100%;
+		padding: 0px 0px 0px 25px;
+	}
+}
